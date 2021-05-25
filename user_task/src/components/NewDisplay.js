@@ -13,7 +13,7 @@ export const NewDisplay = () => {
     const users= [name,age,city,phno]
 
     const x=users.map(
-        ()=> ( <View key={phno} name={name} age={age} city={city} phno={phno}
+        ()=> (<View key={phno} name={name} age={age} city={city} phno={phno}
         />)
     )
     
