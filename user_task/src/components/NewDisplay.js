@@ -4,11 +4,22 @@ import {View} from './View'
 
 export const NewDisplay = () => {
 
+    const {name} = useContext(NewFormContext)
+    const {age} = useContext(NewFormContext)
+    const {city} = useContext(NewFormContext)
+    const {phno} = useContext(NewFormContext)
+
     const {show} = useContext(NewFormContext)
+    const users= [name,age,city,phno]
+
+    const x=users.map(
+        user=> <View key={user.phno} name={user.name} age={user.age} city={user.city} phno= {user.phno}
+        />
+    )
     
     return (
-        <div style={{border: '1px solid black', width: 320, marginLeft: 50, marginRight: 50, marginTop: 80, height: 500 }}>
-            {show ? <><View/></> : <></>}
+        <div style={{border: '1px solid black', width: 320, marginLeft: 50, marginRight: 50, marginTop: 80, height: 500, overflowY:'auto' }}>
+            {show ? <>{x}</> : <></>}
         </div>
     )
 }

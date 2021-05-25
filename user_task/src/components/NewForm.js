@@ -2,7 +2,7 @@ import React, {useState, createContext, useContext} from 'react'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button';
 import {NewFormContext} from './contexts/NewFormContext'
-
+import {View} from './View'
 
 export const NewForm = () => {
     // const [name, setName]= useState('')
@@ -15,6 +15,8 @@ export const NewForm = () => {
     const {setCity} = useContext(NewFormContext)
     const {setPhno} = useContext(NewFormContext)
     const {setShow} = useContext(NewFormContext)
+    
+
 
     return (
         <div >
@@ -40,7 +42,13 @@ export const NewForm = () => {
                         setPhno(event.target.value)
                     }}/>
                     <Button variant="contained" style={{margin: 'inherit'}} type='submit'
-                    onClick={() => {setShow(true)}}> Submit </Button>
+                    onClick={(e) => 
+                    {
+                        e.preventDefault()
+                        setShow(true)
+                        
+                    }
+                        }> Submit </Button>
                 </form>
             </div>
             

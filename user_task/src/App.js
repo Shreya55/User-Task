@@ -11,6 +11,8 @@ export default function App() {
   const [age, setAge]= useState('')
   const [city, setCity]= useState('')
   const [phno, setPhno]= useState('')
+
+  // const users= [name,age,city,phno]
   return (
     <div className='rowC'>
       <NewFormContext.Provider value={{name, age, city, phno, show, setName, setAge, setCity, setPhno, setShow}}>
