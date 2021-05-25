@@ -16,8 +16,6 @@ export const NewForm = () => {
     const {setPhno} = useContext(NewFormContext)
     const {setShow} = useContext(NewFormContext)
     
-
-
     return (
         <div >
             <div style={{border: '1px solid black', width: 320, marginLeft: 350, marginTop: 80, height: 500}}>

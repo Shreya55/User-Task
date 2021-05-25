@@ -13,8 +13,8 @@ export const NewDisplay = () => {
     const users= [name,age,city,phno]
 
     const x=users.map(
-        user=> <View key={user.phno} name={user.name} age={user.age} city={user.city} phno= {user.phno}
-        />
+        ()=> ( <View key={phno} name={name} age={age} city={city} phno={phno}
+        />)
     )
     
     return (
