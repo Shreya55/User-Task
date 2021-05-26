@@ -11,9 +11,7 @@ export const DataReducer = (state, action) => {
           return {
             ...state,
             datas: state.datas.map((data) =>
-              data.id === action.payload
-                ? { ...data, show: !data.show }
-                : data
+              data.id === action.payload ? { ...data, show: !data.show }: data
             ),
           };
         case UPDATE_DATA:
